@@ -1,0 +1,290 @@
+/* External CSS for Elearning Homepage */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #F1F5F9;
+}
+
+/* ---------------- TOP BAR ---------------- */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 90px;
+  background: #F5FFF7;
+  border-bottom: 1px solid #E1F1BA;
+  font-size: 14px;
+}
+.top-bar-left,
+.top-bar-mid,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-bar-left > div:first-child {
+    margin-right: 20px; 
+}
+
+.top-bar-left button {
+  background: #3bb54a;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.top-bar-left img{
+    margin-top: 9px;
+    margin-right: 16px;
+    
+}
+
+.top-bar-right img {
+    background: #3AB54A;
+    border: none;
+    border-radius: 50%; /* Make them perfectly circular */
+    padding: 4px;
+   
+}
+.top-bar-right span{
+    color:#7C7979;
+    font-size:16px; /* Adjusted font size */
+    margin-right: 5px; /* Space before icons */
+}
+
+.top-bar-mid span{
+    color:#2C2626 ;
+    font-size: 16px;
+}
+
+.top-bar img {
+  height: 22px;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 90px;
+  background: #ffffff;
+}
+nav .logo img {
+  height: 55px;
+  border: none
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #7C7979;
+  font-weight: 600;
+  font-size: 16px;
+}
+nav button {
+  
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #3AB54A;
+  
+}
+nav button:nth-of-type(1) {
+padding: 14px 17px;
+  background: #fff;
+  color: #3AB54A;
+}
+nav button:nth-of-type(2) {
+    padding: 14px 13px;
+  background: #3AB54A;
+  color: #fff;
+  border: none;
+}
+
+.nav-right{
+    display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav img{
+  
+  border: 2px solid #ADAFAD;
+  border-radius: 20px;
+  padding: 5px;
+  
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 90px;
+   background: #ffffff;
+   position: relative;
+}
+.hero-text h4 {
+  color: #989899;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 550px;
+  color:#595555;
+  margin: 0
+}
+.hero-text h1 span {
+  color: #3AB54A;
+}
+.hero-text p {
+  color: #989899;
+  font-size: 16px;
+  margin-top: 10px;
+  max-width: 420px;
+}
+.hero-text button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid #37AD49;
+  margin-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.hero-text button:nth-of-type(1) {
+  background: #fff;
+  color: #37AD49;
+}
+.hero-text button:nth-of-type(2) {
+  background: linear-gradient(180deg, #9AC23B 0%, #C6AD2E 100%);
+  color: #ffffff;
+  border: none;
+}
+
+/* RIGHT SIDE HERO AREA */
+.hero-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* MAIN IMAGE */
+.hero-img {
+    position: absolute;
+   right: 150px;
+  margin-top: 50px;
+  width: 460px;
+  z-index: 2;
+}
+
+/* LEFT STAT */
+.stat-left {
+  position: absolute;
+  top: -35px;
+  left: -770px;
+  text-align:left;
+}
+
+.stat-left .count {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3AB54A;
+}
+
+.stat-left p {
+  color: #7c7c7c;
+  font-size: 14px;
+  margin-top:5px;
+  margin-bottom: 10px;
+}
+
+.stat-left div{
+    display: flex;
+    align-items: center;
+}
+
+
+.avatars img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: -8px;     /* Overlap previous avatar */
+  z-index: 1;
+}
+
+.stat-left .tag {
+  display: inline-block;
+  
+  background: #3b3b3b;
+  color: #fff;
+  padding: 6px 4px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-left: -6px;
+}
+
+/* RIGHT STAT */
+.stat-right {
+  position: absolute;
+  right: 80px;
+  bottom: 130px;
+  text-align: left;
+  display: flex;
+  gap: 12px;
+
+}
+
+.stat-right img{
+    width: 28px;
+    height: 28px;
+    background: #e3f7e5;
+    border-radius: 50%;
+    padding: 5px;;
+}
+
+.stat-right .txt{
+    max-width: 100px;
+}
+
+.stat-right .count {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3AB54A;
+}
+
+.stat-right p {
+  color: #7c7c7c;
+  font-size: 14px;
+  margin:0;
+  white-space: nowrap;
+}
+
+.avatars img:first-child {
+  margin-left: 0;          /* First avatar fully visible */
+  z-index: 5;              /* Top layer */
+}
+
+.avatars img:nth-child(2) { z-index: 4; }
+.avatars img:nth-child(3) { z-index: 3; }
+.avatars img:nth-child(4) { z-index: 2; }
+.avatars .tag:nth-child(5) { z-index: 1; }
+
+.stat-next{
+    position: absolute;
+    right: 55px;
+    bottom: -100px;
+}
