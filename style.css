@@ -311,39 +311,48 @@ nav img{
 }
 
 
-/* ---------------- COURSE CARDS SECTION ---------------- */
+/* * ---------------- COURSE CARDS SECTION ---------------- */ */
+
 .courses-section {
-  padding: 70px 90px;
-  background: #fbfbfb;
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 20px;
 }
 
 .courses-container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   text-align: center;
   background-color: #ffffff;
-  padding: 20px 10px 40px;
-  border-radius: 20px;
+  margin: 70px 80px;
+  margin-right: 90px;
 }
 
 .badge {
   display: inline-block;
   background: #fff5c1;
-  color: #8a7300;
-  padding: 6px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 30px;
+  border-radius: 5px;
 }
 
 .section-title {
-  font-size: 30px;
-  font-weight: 700;
-  margin: 20px 0 40px;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 12px;
 }
 
 .swiper {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
+}
+
+.courseSwiper{
+    padding:40px 80px;
 }
 
 /* FIXED LAYOUT (2 CARDS INSIDE EACH SLIDE) */
@@ -354,67 +363,302 @@ nav img{
 }
 
 .course-card {
-  background: white;
+  background: #f2f6fa;
   display: flex;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
   transition: 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
 }
 
 .course-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .course-img {
-  width: 120px;
-  border-radius: 10px;
+  width: 220px;
+  min-width: 220px;
 }
 
 .course-content {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .course-content h3 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: 20px; /* Increased from 18px */
+  font-weight: 600;
+  margin: 0;
+  max-width: 260px; /* Forces wrap after "Only Guide You Need" */
+  line-height: 1.3;
+  color: #2F2C2C;
+  margin-top: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .course-content h3 {
+    font-size: 18px;
+    max-width: 100%; /* Full width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .course-content h3 {
+    font-size: 16px;
+  }
 }
 
 .course-content p {
   color: #616161;
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 16px;
 }
 
 .language-tag {
   display: inline-block;
-  background: #E4F3C2;
+  background: #FFF8D7;
   padding: 5px 12px;
-  color: #4D6F12;
-  border-radius: 12px;
   font-size: 13px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+  font-weight: 500;
 }
 
 .view-btn {
-  background: #B8D778;
+  background: linear-gradient(180deg, #9AC23B 0%, #C6AD2E 100%);
+
   border: none;
   padding: 10px 22px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 14px;
+  color: white;
+  display: inline-block;
+  width: fit-content;
+  display: inline-block;
 }
 
 .view-btn:hover {
-  background: #A5C364;
+  opacity: 0.9;
 }
 
-/* Pagination spacing */
+/* Pagination dots - visible on all devices */
 .swiper-pagination {
   margin-top: 20px !important;
+  position: relative !important;
+  bottom: 0 !important;
 }
 
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #d1d1d1;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #b8d778;
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .courses-container {
+    padding: 40px 20px 30px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .course-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .course-img {
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .course-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .language-tag {
+    align-self: center;
+  }
+
+  .view-btn {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-section {
+    padding: 40px 15px;
+  }
+
+  .courses-container {
+    padding: 30px 15px 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin: 15px 0 30px;
+  }
+
+  .course-card {
+    padding: 15px;
+  }
+
+  .course-img {
+    width: 120px;
+    min-width: 120px;
+  }
+
+  .course-content h3 {
+    font-size: 16px;
+  }
+
+  .course-content p {
+    font-size: 13px;
+  }
+}
+
+
+/* ============================
+   ABOUT US NEW DESIGN
+=============================*/
+
+.about-section {
+  padding: 58px 90px;
+  background: #ffffff;
+  position: relative;
+
+  background-image: url("/asset/img/3.svg"), url("/asset/img/3sectionbg.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0 top -10px, 
+  right -80px bottom 128px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin: auto;
+  padding-left: 70px;
+}
+
+.about-left {
+  max-width: 520px;
+}
+
+.about-badge {
+
+  color:#E0DDDD;
+  
+  font-weight: 500;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0px;
+  line-height: 1.3;
+  color: #E9E1E1;
+}
+
+/* GREEN FEATURE BOX */
+.about-features {
+  margin-top: 30px;
+  background:#9AC23B;
+  padding: 15px 28px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.feature-box {
+  text-align: left;
+  width: 50%;
+}
+
+.feature-box .circle{
+  padding: 5px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.feature-box img {
+  width: 22px;
+  height: 22px;
+}
+
+.feature-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 8px;
+  color: #2F2C2C;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #424446;
+  margin: 0;
+}
+
+/* White line between boxes */
+.divider {
+  width: 2px;
+  background: white;
+  height: 70px;
+  border-radius: 10px;
+}
+
+/* Learn more button */
+.learn-more-btn {
+  margin-top: 35px;
+  padding: 14px 30px;
+  background: #ffffff;
+  border: 2px solid #3ab54a;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  background: #f1f5f9;
+}
+
+/* RIGHT IMAGE
+.about-right {
+  position: relative;
+}
+
+.about-img {
+  width: 520px;
+  border-radius: 10px;
+} */
