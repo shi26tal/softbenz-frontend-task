@@ -537,19 +537,19 @@ nav img{
 }
 
 
-/* ============================
-   ABOUT US NEW DESIGN
-=============================*/
+   /* ABOUT US NEW DESIGN  */
+
 
 .about-section {
   padding: 58px 90px;
-  background: #ffffff;
+  margin-bottom: 35px;
+  
   position: relative;
 
   background-image: url("/asset/img/3.svg"), url("/asset/img/3sectionbg.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: left 0 top -10px, 
-  right -80px bottom 128px;
+  right -80px bottom 25px;
 }
 
 .about-wrapper {
@@ -640,17 +640,18 @@ nav img{
 /* Learn more button */
 .learn-more-btn {
   margin-top: 35px;
-  padding: 14px 30px;
-  background: #ffffff;
-  border: 2px solid #3ab54a;
-  border-radius: 8px;
+  padding: 10px 16px;
+  background: transparent;
+  border: 2px solid #C6AD2E;
+  border-radius: 6px;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  color: #FFFFFF;
 }
 
 .learn-more-btn:hover {
-  background: #f1f5f9;
+  background: #C6AD2E;
 }
 
 /* RIGHT IMAGE
@@ -662,3 +663,110 @@ nav img{
   width: 520px;
   border-radius: 10px;
 } */
+
+
+/*************** material section ***********/
+
+.material-section .badge{
+  margin-top: 10px;
+}
+
+
+.material-section {
+  padding: 58px 90px;
+  text-align: center;
+  background: linear-gradient(180deg, #F5FFF7 0%, rgba(245, 255, 247, 0) 100%);
+}
+
+.material-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.material-card {
+  display: flex;
+  background: #E2E8F0;
+  border: 1px solid #DAEAFF;
+  border-radius: 10px;
+  padding: 22px;
+  gap: 16px;
+  align-items: flex-start;
+  transition: .3s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.material-img {
+  width: 240px;
+  border-radius: 10px;
+  
+}
+
+.material-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.material-badge {
+  background: #C6AD2E;
+  padding: 1px 10px;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 400;
+  color:#F2F2F2;
+  margin-bottom: 30px;
+}
+
+.material-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color:#2F2C2C;
+  
+}
+
+.lesson-count {
+  color: #626262;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.lang-tag {
+  background:#FFF8D7;
+  padding: 2px 12px;
+  
+  font-size: 14px;
+  width: fit-content;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.access-btn {
+  background: linear-gradient(180deg, #9AC23B 0%, #C6AD2E 100%);
+width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.access-btn:hover {
+  opacity: .9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .material-grid {
+    grid-template-columns: 1fr;
+  }
+}
